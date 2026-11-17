@@ -3,9 +3,10 @@ import argparse,copy,html,json,re,shutil
 from pathlib import Path
 import xml.etree.ElementTree as E
 from project_state import Q,read,save,sha,refresh,validate_svg
+from plan_project import validate as validate_plan, write_documents
 SKILL=Path(__file__).resolve().parents[1]
 
-def initialize(spec_path,out):
+def initialize(spec_path,out,preset_demo=False):
     spec=read(spec_path);base=spec_path.parent
     profile=read(base/spec['profile']);canvas=profile.get('canvas')
     if not isinstance(canvas,list) or len(canvas)!=2 or any(not isinstance(x,(int,float)) or x<100 or x>10000 for x in canvas):raise ValueError('Profile needs a positive two-dimensional canvas')
@@ -13,7 +14,16 @@ def initialize(spec_path,out):
     if out.exists() and any(out.iterdir()):raise ValueError('Use an empty output directory; use --refresh for an existing project')
     slides=spec.get('slides',[])
     if not slides:raise ValueError('No slides supplied')
+    plan_path=(base/spec['plan']).resolve() if spec.get('plan') else None
+    if not plan_path and not preset_demo and not str(spec.get('planning_waiver','')).strip():
+        raise ValueError('First save the detailed outline; provide plan in the spec (see brief-and-outline.md)')
+    if plan_path:
+        plan=validate_plan(read(plan_path))
+        if [s['id'] for s in plan['slides']]!=[s.get('id',f'slide-{i:02}') for i,s in enumerate(slides,1)]:
+            raise ValueError('Slide order must match the detailed outline')
     for d in ['project/svg_output','project/images','project/notes']:(out/d).mkdir(parents=True,exist_ok=True)
+    if plan_path:
+        save(out/'project/plan.json',plan);write_documents(out/'project/plan.json')
     save(out/'project/style-profile.json',profile);pages=[];contracts={'schema':1,'pages':{}};sources=[]
     for i,row in enumerate(slides,1):
         ident=row.get('id',f'slide-{i:02}')
@@ -52,11 +62,11 @@ def initialize(spec_path,out):
 const pageCount='''+str(len(pages))+''';let current=1;function show(n){current=Math.min(pageCount,Math.max(1,n));document.body.classList.add('single');document.querySelectorAll('.page').forEach((p,i)=>p.classList.toggle('selected',i===current-1));document.querySelector('#pageSelect').value=current;window.scrollTo(0,0)}function step(d){show(current+d)}function allPages(){document.body.classList.remove('single')}document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1)});show(1);
 </script></body></html>'''
     (out/'preview.html').write_text(document,encoding='utf-8')
-    save(out/'build.json',{'schema':3,'title':title,'canvas':canvas,'pages':pages});refresh(out)
+    save(out/'build.json',{'schema':3,'title':title,'canvas':canvas,'pages':pages,'planning_required':bool(plan_path),'planning_exemption':'bundled-preset-preview' if preset_demo else spec.get('planning_waiver')});refresh(out)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--out',required=True,type=Path)
     g=p.add_mutually_exclusive_group(required=True);g.add_argument('--spec',type=Path);g.add_argument('--preset',choices=['academic-blue','editorial-light','structured-blue']);g.add_argument('--refresh',action='store_true')
     a=p.parse_args();root=a.out.resolve()
     if a.refresh:refresh(root)
-    else:initialize(a.spec.resolve() if a.spec else SKILL/'assets/presets'/a.preset/'deck.json',root)
+    else:initialize(a.spec.resolve() if a.spec else SKILL/'assets/presets'/a.preset/'deck.json',root,preset_demo=bool(a.preset))

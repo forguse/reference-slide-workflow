@@ -24,13 +24,14 @@ Choose page jobs from the actual material: comparison, explanation, sequence, ev
 
 ## Author, preview and export
 
-1. Plan slide purposes and evidence. Keep requested count and duration; use sources for factual claims. Do not fill empty space with repeated claims or decorative labels.
-2. Build a small representative pilot first. Use a dense content page and, when relevant, a cover or image-rich page to test the reference interpretation. Check internally and continue; ask for approval only when the user has requested a preview checkpoint.
-3. Author editable SVG pages at the chosen canvas size. Use real raster assets for photographs; native text, charts, diagrams and tables for editable evidence. Add explicit alignment/spacing contracts. The reference controls the style, not a global fixed font, color or aspect ratio.
-4. Initialize a project once using `build_html.py --spec ... --out ...`. HTML and PPT share these SVGs. Built-in presets require an explicit `--preset` choice. See [runtime commands](references/runtime.md).
-5. Run automatic checks for every page. Inspect HTML screenshots for optical alignment, figure whitespace, hierarchy and rhythm. Record the exact reviewed screenshots; failures and stale evidence block export.
-6. Use the complete pinned official PPT Master package, preserving its notices and integrity checks. Export editable PPTX, read text back and render the actual PPTX. Inspect the changes introduced by conversion. See [revision and review](references/revision-and-review.md).
-7. Deliver the final PPTX and maintain the project source for future revisions. Include HTML or sources when requested. Do not say a file was inspected in PowerPoint/WPS unless it was.
+1. Before designing a new deck, write a detailed, saved **page-by-page Markdown outline** following [brief and outline planning](references/brief-and-outline.md). Handle vague briefs, detailed requirements and user-supplied outlines differently; map the user's requirements to pages. State the actual message, content, sources, visuals, composition and timing of each page. Honor an explicit request to skip this artifact. For an existing deck, update only affected outline entries when content changes; a spacing fix does not require a new outline.
+2. Set the [material boundaries](references/material-boundaries.md) from the user's instructions before choosing assets. Keep permissions, provenance and production questions in a separate document, not slide disclaimers. The plan and asset records must agree with the images actually used. Do not fill empty space with unsupported claims or decorative labels.
+3. Build a small representative pilot first, after the outline exists. Use a dense content page and, when relevant, a cover or image-rich page to test the reference interpretation. Check internally and continue; ask for approval only when the user has requested a preview checkpoint.
+4. Author editable SVG pages at the chosen canvas size. Use real raster assets for photographs; native text, charts, diagrams and tables for editable evidence. Add explicit alignment/spacing contracts. The reference controls the style, not a global fixed font, color or aspect ratio.
+5. Initialize a project once using `build_html.py --spec ... --out ...`. HTML and PPT share these SVGs. Built-in presets require an explicit `--preset` choice. See [runtime commands](references/runtime.md).
+6. Run automatic checks for every page. Inspect HTML screenshots for optical alignment, figure whitespace, hierarchy and rhythm. Compare the actual pages with the outline and requirements, not just their geometry. Record the exact reviewed screenshots; failures and stale evidence block export.
+7. Use the complete pinned official PPT Master package, preserving its notices and integrity checks. Export editable PPTX, read text back and render the actual PPTX. Inspect the changes introduced by conversion. See [revision and review](references/revision-and-review.md).
+8. Deliver the final PPTX with links to the outline and material/decision record, and maintain the project source for future revisions. Include HTML or sources when requested. Do not say a file was inspected in PowerPoint/WPS unless it was.
 
 ## Layout responsibility
 

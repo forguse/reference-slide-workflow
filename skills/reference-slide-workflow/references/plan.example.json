@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "brief": {
+    "title": "Library discovery: a two-page briefing",
+    "input_mode": "detailed_brief",
+    "audience": "Library service team",
+    "purpose": "Explain the proposed search process",
+    "narrative": "User need, then the process that addresses it",
+    "duration_seconds": 120,
+    "page_count": 2,
+    "assumptions": ["Example content only; replace with the actual task"]
+  },
+  "policy": {
+    "external_facts": false,
+    "external_images": false,
+    "generated_images": false,
+    "basis": "Example brief: use only the supplied service notes",
+    "overrides": []
+  },
+  "requirements": [
+    {"id": "r1", "text": "Explain the user need and the proposed search process", "origin": "user", "scope": "pages"},
+    {"id": "r2", "text": "Use the supplied notes only", "origin": "user", "scope": "deck"}
+  ],
+  "sources": [
+    {"id": "notes", "kind": "supplied", "locator": "service-notes.md, sections 1–2", "rights": "User supplied for this task"}
+  ],
+  "assets": [],
+  "decisions": [],
+  "slides": [
+    {
+      "id": "need",
+      "title": "One question should lead to a usable source",
+      "purpose": "Establish the service goal",
+      "message": "Search should connect a user's question with an accessible source",
+      "content": ["Start from the question and the intended use", "Show source availability alongside relevance"],
+      "sources": ["notes"],
+      "visuals": [{"kind": "native", "description": "Question → relevant source → access: an editable three-stage diagram", "sources": ["notes"], "placement": "Right side, aligned with the left explanation"}],
+      "layout": "Left explanation and right diagram share a visible top edge; lower conclusion spans both columns",
+      "seconds": 50,
+      "speaker_focus": "Explain why access is part of discovery",
+      "transition": "Translate the service goal into a short search process",
+      "requirements": ["r1"]
+    },
+    {
+      "id": "process",
+      "title": "Narrow the question, compare sources, keep a record",
+      "purpose": "Explain the proposed process",
+      "message": "A traceable three-step process makes the next action clear",
+      "content": ["Define key terms and filters", "Compare candidate sources", "Save the chosen source and access link"],
+      "sources": ["notes"],
+      "visuals": [{"kind": "native", "description": "Three connected steps with input and output labels from the supplied notes", "sources": ["notes"], "placement": "Across the page, with aligned explanatory text below each step"}],
+      "layout": "Three columns with a shared heading baseline and equal gaps; final recommendation below",
+      "seconds": 70,
+      "speaker_focus": "Identify the output of each step",
+      "transition": "Close with the next action",
+      "requirements": ["r1"]
+    }
+  ]
+}

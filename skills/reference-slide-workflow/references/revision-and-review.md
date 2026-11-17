@@ -42,6 +42,8 @@ The review gate records observations against actual screenshot hashes. Changes i
 
 ## Safe optimization
 
+Retain the saved outline with the project. For changed facts, visuals, narrative or page order, update only the affected `project/plan.json` entries, regenerate the two readable documents with `plan_project.py write`, then refresh. Formatting changes do not require an outline rewrite. Plan changes are part of the build manifest but do not invalidate unchanged page pixels; material permissions are checked again at export. Older decks can receive a local fix without inventing a retrospective full outline.
+
 HTML screenshots are reused only when page inputs, contracts, profile, browser/font measurements, checker versions and screenshot bytes match. PPT screenshots depend on the actual native slide, media, master/theme dependencies, renderer/fonts and screenshot bytes. Notes do not invalidate unchanged pictures, but exported notes and file hashes are still checked.
 
 PPTX is still packaged completely by the official converter. That is not a redesign. Avoid fragile manual ZIP splicing merely to save packaging time. Speed gains come from retaining authored sources, editing a small set of objects and reusing proven unchanged renders.

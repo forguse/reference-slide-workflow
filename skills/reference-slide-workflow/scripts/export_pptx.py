@@ -5,6 +5,7 @@ import xml.etree.ElementTree as E
 from pathlib import Path
 from verify_pptx import verify
 from review_gate import require
+from plan_project import verify_build
 SKILL=Path(__file__).resolve().parents[1]
 
 def main():
@@ -14,6 +15,7 @@ def main():
     ap.add_argument('--pptx',type=Path,help='Defaults to OUT/template.pptx')
     ap.add_argument('--allow-different-version',action='store_true',help='Use only after explicitly accepting a different converter version')
     a=ap.parse_args();root=a.out.resolve()
+    verify_build(root,final=True)
     prior=root/'export-manifest.json'
     if prior.exists():
         last=json.loads(prior.read_text(encoding='utf-8'));p=Path(last['pptx'])

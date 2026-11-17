@@ -12,9 +12,10 @@ An agent skill for reference-based presentation design: understand the visual la
 
 1. 读参考的画布、字体层级、图文比例、信息密度、渐变和对齐关系。
 2. 区分需要保持的视觉锚点、可以变化的构图、需要单独授权的身份素材。
-3. 按新内容选择比较、流程、证据等页面结构，先做代表页验证。
-4. HTML 和 PPT 使用同一份页面源，检查文字容量、关系对齐和实际导出效果。
-5. 后续修改只调整必要页面，保留原稿，复用验证过的未变化页面。
+3. 根据需求的完整程度写逐页 MD 大纲，明确内容、图表、依据、布局和讲述时间，再做代表页验证。
+4. 按用户指示确定素材范围：仅用提供的素材、允许外部补充或允许生成概念图，也支持逐页区别处理。
+5. HTML 和 PPT 使用同一份页面源，检查文字容量、关系对齐和实际导出效果。
+6. 后续修改只调整必要页面，保留原稿，复用验证过的未变化页面。
 
 它适用于不同主题和风格，不限定科研答辩，也不把字体、蓝色或 16:9 当作全局规则。PNG/JPG、PDF 和 PPTX 都可以作为参考。复杂动画、视频和已有原生对象的保留应进入相应的原生编辑流程，不用静态页面替代它们。
 
@@ -59,7 +60,18 @@ python install.py
 
 如果在 PowerPoint/WPS 中手动改过文件，请提供最新 PPT 并说明“以这份为准”。流程会保留这些修改，不从旧源覆盖。
 
+## 先写清楚每页，再制作
+
+用户只给一个笼统主题时，先阅读材料，由代理补全叙事和页序；要求很明确时，逐项落实到页面；已有大纲时，沿用其结构并补足图文和表达细节。明确要求严格遵循的大纲不会被擅自改写。
+
+每页大纲包括标题、核心信息、拟用文字、来源定位、每张图的内容与作用、图文位置、布局关系和讲述时间。默认保存为 `outline.md`，素材来源、权限、假设和待确认事项另存 `materials-and-decisions.md`。这些制作记录不会变成 PPT 上的免责声明。未要求先审批时，完成大纲后继续制作。
+
+新建自定义项目会检查是否有大纲、要求是否落实到页、页序和时长是否一致，以及实际图片是否在素材记录内。内容准确性与叙事质量仍由代理阅读原材料后判断；几何检查不能代替这一步。局部内容修改只同步相关页，改对齐或间距无需重写大纲。
+
+素材边界按用户指示决定，不按学科猜测。“只用我的材料”不会因为缺图而变成联网找图；“可以找图”也不自动等于允许生成图片。关键事实有疑问时先问清楚，非关键配图候选放在独立文档中集中处理。
+
 ## 三套可选样式
+
 
 | 样式 | 视觉特征 | 示例 |
 |---|---|---|
@@ -98,6 +110,8 @@ PPT 文件仍由正式转换器完整封装，保证对象关系完整。已有 
 ## 文档
 
 - [参考风格如何提取](skills/reference-slide-workflow/references/reference-analysis.md)
+- [不同详细程度的需求与逐页大纲](skills/reference-slide-workflow/references/brief-and-outline.md)
+- [素材边界与待确认事项](skills/reference-slide-workflow/references/material-boundaries.md)
 - [样式与页面关系规范](skills/reference-slide-workflow/references/style-schema.md)
 - [构图、排版与文案](skills/reference-slide-workflow/references/composition-and-writing.md)
 - [局部修改与检查机制](skills/reference-slide-workflow/references/revision-and-review.md)

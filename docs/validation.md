@@ -30,3 +30,9 @@ The public tree is separately scanned for personal paths, credentials, private t
 The `structured-blue` preset adds nine layouts adapted from an authorized reference. All nine passed HTML geometry and font checks, editable PPTX export, package readback and actual PPTX visual review. The original raster assets were not copied: image regions use editable neutral placeholders, and the cover/end background uses anonymous native geometry. All reference text was replaced with generic project text. The raw reference and the private adaptation script are not distributed.
 
 The follow-up also exercised incremental checking: after changing two pages, seven unchanged screenshots were reused. A metadata-only group-bounds fix produced nine screenshots with hashes identical to the reviewed version. The retained-temporary-directory runner was corrected to expose the invoked script's own directory, so its sibling imports behave like a normal direct invocation.
+
+## Planning and material scope
+
+Nine behavior tests pass for the outline-first workflow. They cover requirement coverage, page order and duration, page-scoped material permissions, tracing external/generated origins through derived assets, rejection of generated experimental evidence, separation of production questions from page content, required decisions blocking final export, detection of changed image bytes and stale Markdown, and rejection of a new custom build without a plan. A full two-page initialization retained both readable documents; a plan-only revision changed the build manifest while preserving both page visual fingerprints. Test fixtures are retained in individual temporary directories without recursive cleanup.
+
+These checks validate structure, traceability and revision behavior. They do not certify a source's truth, license, scientific interpretation or narrative quality; the agent must read the source and compare the rendered pages with the requirements.

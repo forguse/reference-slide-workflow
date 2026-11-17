@@ -23,6 +23,8 @@ def validate_svg(root,canvas):
 def refresh(root):
     root=Path(root).resolve();m=read(root/'build.json')
     if m.get('schema')!=3:raise ValueError('Use an existing v3 project; do not reset it from a template')
+    from plan_project import verify_build
+    verify_build(root)
     profile=read(root/'project/style-profile.json');canvas=profile['canvas']
     if m['canvas']!=canvas:raise ValueError('Canvas changes require an explicitly reviewed project revision')
     contracts=read(root/'project/layout-contracts.json');shell=(root/'preview.html').read_text(encoding='utf-8')
@@ -47,7 +49,7 @@ def refresh(root):
         rendered.append(f'<section class="page" id="page-{row["page"]}">'+E.tostring(preview,encoding='unicode')+'</section>')
     if shell.count('<main class="pages">')!=1:raise ValueError('Unknown preview shell')
     page=root/'preview.html';page.write_text(re.sub(r'<main class="pages">.*?</main>',lambda _: '<main class="pages">'+''.join(rendered)+'</main>',shell,flags=re.S),encoding='utf-8');files.add(page)
-    for name in ['image_sources.json','reference-evidence.json']:
+    for name in ['image_sources.json','reference-evidence.json','plan.json','outline.md','materials-and-decisions.md']:
         p=root/'project'/name
         if p.exists():files.add(p)
     m['files']=[{'path':p.relative_to(root).as_posix(),'sha256':sha(p)} for p in sorted(files)]

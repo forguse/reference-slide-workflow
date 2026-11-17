@@ -29,6 +29,7 @@ An authoring spec supplies the profile, actual SVGs and intended relationships:
 ```json
 {
   "title":"A reference-based presentation",
+  "plan":"plan.json",
   "profile":"style-profile.json",
   "slides":[{
     "id":"evidence",

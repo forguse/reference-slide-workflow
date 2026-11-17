@@ -14,10 +14,13 @@ Custom reference-based pages:
 
 ```sh
 python scripts/inspect_reference.py reference.pptx --out private/reference-evidence.json
+python scripts/plan_project.py write --plan authoring/plan.json
 python scripts/build_html.py --spec authoring/deck.json --out work/my-deck
 ```
 
-The authoring spec points to `style-profile.json`, authored SVGs, notes and layout contracts. See style-schema.md. An image reference requires actual visual inspection; the inspector is evidence collection, not an automatic style copier. Repeated initialization of an existing directory is refused.
+Write the page plan before authoring SVGs; the command saves the readable Markdown outline and material/decision record. The authoring spec points to `plan.json`, `style-profile.json`, authored SVGs, notes and layout contracts. See [brief and outline planning](brief-and-outline.md) and [style schema](style-schema.md). An image reference requires actual visual inspection; the inspector is evidence collection, not an automatic style copier. Repeated initialization of an existing directory is refused.
+
+New custom projects require a plan unless the user explicitly waives it. Literal bundled-preset previews and existing older projects remain supported. Refresh verifies page order, current planning documents and declared image bytes. Export also rejects unresolved required material decisions. The scripts do not decide whether a scientific interpretation is correct.
 
 ## Preview and inspect
 
