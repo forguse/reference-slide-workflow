@@ -46,10 +46,10 @@ function arg(name,def){const i=process.argv.indexOf(name);return i<0?def:process
    await page.evaluate(n=>show(n),i);
    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
    const locator=page.locator('#page-'+i);
-   const result=await locator.locator('svg').evaluate(svg=>{
+   const result=await locator.locator(':scope > svg').evaluate(svg=>{
     return {canvas:svg.getAttribute('viewBox'),overflow:[]};
    });
-   const geometry=await locator.locator('svg').evaluate((svg,{source,contract})=>{const fn=(0,eval)('('+source+')');return fn(svg,contract)},{source:audit.toString(),contract:contracts.pages[String(i)]});
+   const geometry=await locator.locator(':scope > svg').evaluate((svg,{source,contract})=>{const fn=(0,eval)('('+source+')');return fn(svg,contract)},{source:audit.toString(),contract:contracts.pages[String(i)]});
    const entry={page:i,...result,layout:geometry,visual_digest:manifest.pages[i-1].visual_digest};
    report.pages.push(entry);
    const doc=await cdp.send('DOM.getDocument',{depth:1});

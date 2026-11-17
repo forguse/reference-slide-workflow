@@ -57,8 +57,12 @@ PPTX is still packaged completely by the official converter. That is not a redes
 | White text disappears at a gradient endpoint | Preserve a sufficiently dark endpoint; inspect actual contrast |
 | Line crosses a navigation label | Separate line and label rows, or add an actual opaque plate |
 | HTML is fine but PPT has corner text or collapsed frames | Inspect native extents and converter text metadata, then fix the source |
+| A cutout is correct in HTML but its photograph shifts inside the PPT silhouette | Compare picture frame, source crop and visible geometry bounds. Use the converter's supported native crop representation to keep them consistent; zero-area registration points are not a verified fix. Re-render the actual target app. |
+| A licensed display font works in HTML but becomes another CJK face in PPT | Inspect exported East Asian font mapping, not only installed fonts. Correct the specific mapping and verify the actual app render. |
 | A small edit recreates the entire deck | Keep the project and refresh it; do not reinitialize |
 | A “passed” record survives changed content | Bind reviews to source and screenshot hashes |
 | Cache misses on every new process | Exclude transient environment paths; use stable font inventories |
 
 New failures should produce a focused regression case, not an ever-growing universal restriction on design.
+
+For native image silhouettes, a project may need an explicit source crop whose picture frame matches the visible silhouette bounds. Follow the pinned converter's crop-wrapper contract rather than inventing unsupported SVG attributes. Nested crop SVGs remain part of the same slide; browser checks must select the outer slide SVG, not mistake every nested SVG for another canvas. Keep a rendered example that exercises the exact failed case.

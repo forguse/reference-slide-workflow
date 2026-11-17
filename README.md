@@ -19,6 +19,8 @@ An agent skill for reference-based presentation design: understand the visual la
 
 它适用于不同主题和风格，不限定科研答辩，也不把字体、蓝色或 16:9 当作全局规则。PNG/JPG、PDF 和 PPTX 都可以作为参考。复杂动画、视频和已有原生对象的保留应进入相应的原生编辑流程，不用静态页面替代它们。
 
+对有设计感的参考，分析还包括背景材质、光向、阴影、字体与主体的前后层次。在用户允许的创作范围内，可以独立生成背景或光影素材。抠图只用于大纲中明确需要的跨底色、前景遮字等关系；保留完整照片更合适时，就保留照片。科研证据不会因追求视觉效果而被自动改绘。
+
 ## 安装
 
 在 Codex 中可以让技能安装器安装此仓库的 `skills/reference-slide-workflow` 目录：

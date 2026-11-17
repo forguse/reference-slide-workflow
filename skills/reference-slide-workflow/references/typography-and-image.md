@@ -28,6 +28,14 @@ Verify actual family and style names, supported glyphs and weights, and the perm
 
 Keep text editable where the converter supports it. Inspect the real PPT render for fallback, synthetic weights, line reflow, vertical placement and lost tracking. If the export cannot express a key treatment, revise that treatment or use a supported representation and document the consequence; do not silently deliver flattened body text.
 
+Check the exported text runs' actual Latin and East Asian typefaces as well as the rendered page. An installed font and a correct browser preview do not prevent a converter from substituting its own CJK defaults. Use a documented, project-specific mapping when needed; do not silently alter global converter defaults for all users.
+
+## Background and lighting carry style too
+
+When the reference relies on material or atmospheric depth, analyze its background as a composition: texture scale and contrast, pigment/tonal layers, light direction, soft shadows, edge transitions and quiet reading areas. Separate effects inside the slide from the border or drop shadow used only to display the portfolio image. A flat color plus a generic paper texture may lose the reference's defining depth.
+
+Within the user's creative-image permission, independently generated textures, lighting environments or separate light/shadow assets may support the page. Choose them in the page design outline, harmonize their direction and color with the foreground photograph, and keep typography and necessary foreground objects separately editable. Inspect the whole composition for pasted-on subjects, implausible shadows, busy grain and lost contrast. This is optional art direction, not a requirement to add dramatic lighting to every deck. Do not relight or invent features in protected evidence; a creative environment for a real object must not be represented as its photographed setting. Record the actual treatment outside the slide.
+
 ## Inspect the result
 
 Review the cover and the hardest mixed-type/image page at presentation scale and close-up. Check the intended reading order, font role continuity, balanced visual weight, image subject clearance, small-text contrast, crop/caption correspondence and optical spacing. A geometric pass alone cannot establish expressive quality.

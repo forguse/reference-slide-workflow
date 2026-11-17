@@ -27,6 +27,14 @@ For each intended edit, consider the asset's role and the user's purpose before 
 
 Prefer native cropping, framing, masks or overlays when they solve the presentation need while retaining the original image. Use AI editing when it adds a useful capability, not merely because it is available. A protected photo can sit beside an independently created diagram without repainting the photo.
 
+### Cutouts are a composition decision
+
+Use subject extraction only when the page outline names a concrete relationship it enables: a subject crossing a background division, a foreground silhouette occluding selected display lettering, or a necessary separation of subject and setting. First consider the whole photograph and an ordinary crop. If the doorway, environment, light or surrounding evidence already organizes the page, retain that context. A cultural theme, an attractive reference or available extraction tooling alone is not a reason to cut out the subject. There is no cutout quota or default cutout style.
+
+Record the reason within the page's `design.image_treatment`: why a rectangular crop is insufficient; what foreground/background layers are intended; what may be occluded and what must remain clear. Also record the chosen method and a fallback. Prefer a native mask over unchanged source pixels when it is sufficiently faithful and exportable. A generated candidate that changes a face, hand, artifact, lettering or architectural detail is not an accurate extraction; reject it or obtain specific authorization for an explicitly conceptual alternative.
+
+Inspect edges, holes, fine protrusions, original proportions and the subject's relation to text. Then inspect the **actual PPT export**: a correct SVG preview or a valid picture-geometry element does not establish correct crop placement in the presentation app. Verify image frame, crop and silhouette together. Keep failed candidates in the production record, not in the slides.
+
 Never overwrite the original. Record the derivative's parent, actual edit, tool, prompt when applicable, source/derivative hashes and slide use; inspect before and after. Generative edits must be declared as generated/derived material and must not pass through as unchanged user evidence. For optional editable-image candidates, show the alternative separately or describe it in the production record; keep uncertainty out of slide copy. User-required and legally required disclosures still apply.
 
 ## Where uncertainties and sources belong
