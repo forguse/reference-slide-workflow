@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "name": "academic-blue",
+  "canvas": [
+    1280,
+    720
+  ],
+  "language": "zh-CN",
+  "typography": {
+    "title": {
+      "family": "Microsoft YaHei",
+      "size": 34,
+      "weight": 700
+    },
+    "body": {
+      "family": "Microsoft YaHei",
+      "size": 24,
+      "weight": 400
+    },
+    "caption": {
+      "family": "Microsoft YaHei",
+      "size": 18,
+      "weight": 400
+    },
+    "numeral": {
+      "family": "Arial",
+      "size": 44,
+      "weight": 700
+    }
+  },
+  "palette": {
+    "bg": "#F8FAFD",
+    "ink": "#142234",
+    "accent": "#073B85",
+    "secondary": "#5985B7",
+    "soft": "#E8EFF8",
+    "highlight": "#B3131C",
+    "line": "#B5C7DF"
+  },
+  "margins": {
+    "left": 58,
+    "right": 58,
+    "top": 40,
+    "bottom": 38
+  },
+  "fixed_anchors": [
+    "Shared left edge for heading and body",
+    "Stable type hierarchy",
+    "Consistent emphasis color"
+  ],
+  "flexible_compositions": [
+    "Evidence with interpretation",
+    "Comparison table",
+    "Three-stage process",
+    "Standalone cover and ending"
+  ],
+  "identity_assets": [],
+  "origin": "Original neutral preset; all example scores are synthetic",
+  "writing": {
+    "repeated_middle_dot_labels": false
+  }
+}

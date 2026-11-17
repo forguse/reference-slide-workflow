@@ -1,0 +1,15 @@
+{
+  "ppt_master": {
+    "repository": "https://github.com/hugohe3/ppt-master",
+    "commit": "b243a950e9f85998705551fb1b77c6459573ff39",
+    "skill_subpath": "skills/ppt-master",
+    "version": "6.9.0",
+    "skill_md_sha256": "cda3f1f476a93a48385867dbdb89f661f27c35bfb670f51c7dbd53a3b300c856"
+  },
+  "runtime": {
+    "python": "3.12+",
+    "node": "20+",
+    "canvas": "Defined by each style profile",
+    "fonts": "Not bundled; match the supplied reference"
+  }
+}

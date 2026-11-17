@@ -1,0 +1,354 @@
+{
+  "title": "editorial-light demonstration",
+  "profile": "profile.json",
+  "slides": [
+    {
+      "id": "cover",
+      "name": "城市雨水利用方案",
+      "svg": "layouts/cover.svg",
+      "notes": "All scores and scenarios on this page are synthetic demonstration content. No real project, person or organization is represented.",
+      "contract": {
+        "rules": [
+          {
+            "kind": "align",
+            "items": [
+              "kicker",
+              "main-title",
+              "subtitle",
+              "footer-note"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "main-title",
+              "subtitle"
+            ],
+            "box": [
+              60,
+              180,
+              1150,
+              250
+            ]
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Visible alignment of adjacent content",
+          "Role-based type sizes and density",
+          "Captions and evidence remain legible"
+        ]
+      }
+    },
+    {
+      "id": "chapter",
+      "name": "方案评估",
+      "svg": "layouts/chapter.svg",
+      "notes": "All scores and scenarios on this page are synthetic demonstration content. No real project, person or organization is represented.",
+      "contract": {
+        "rules": [
+          {
+            "kind": "align",
+            "items": [
+              "chapter-number",
+              "chapter-title",
+              "chapter-subtitle"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Visible alignment of adjacent content",
+          "Role-based type sizes and density",
+          "Captions and evidence remain legible"
+        ]
+      }
+    },
+    {
+      "id": "evidence",
+      "name": "三种措施的示例评估",
+      "svg": "layouts/evidence.svg",
+      "notes": "All scores and scenarios on this page are synthetic demonstration content. No real project, person or organization is represented.",
+      "contract": {
+        "rules": [
+          {
+            "kind": "inside",
+            "items": [
+              "page-title"
+            ],
+            "box": [
+              72,
+              20,
+              1150,
+              90
+            ]
+          },
+          {
+            "kind": "align",
+            "items": [
+              "chart-heading",
+              "body-heading"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "body-heading",
+              "body-0",
+              "body-1",
+              "body-2",
+              "body-conclusion"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "label-0",
+              "label-1",
+              "label-2"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "bar-0",
+              "bar-1",
+              "bar-2"
+            ],
+            "edge": "left",
+            "tolerance": 1
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "body-heading",
+              "body-0",
+              "body-1",
+              "body-2",
+              "body-conclusion"
+            ],
+            "box": [
+              808,
+              140,
+              440,
+              470
+            ]
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Visible alignment of adjacent content",
+          "Role-based type sizes and density",
+          "Captions and evidence remain legible"
+        ]
+      }
+    },
+    {
+      "id": "comparison",
+      "name": "两类措施的适用条件",
+      "svg": "layouts/comparison.svg",
+      "notes": "All scores and scenarios on this page are synthetic demonstration content. No real project, person or organization is represented.",
+      "contract": {
+        "rules": [
+          {
+            "kind": "inside",
+            "items": [
+              "page-title"
+            ],
+            "box": [
+              72,
+              20,
+              1150,
+              90
+            ]
+          },
+          {
+            "kind": "align",
+            "items": [
+              "cell-0-0",
+              "cell-0-1",
+              "cell-0-2"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "cell-1-0",
+              "cell-1-1",
+              "cell-1-2"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "cell-2-0",
+              "cell-2-1",
+              "cell-2-2"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "th-0",
+              "cell-0-0",
+              "cell-1-0",
+              "cell-2-0"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "th-1",
+              "cell-0-1",
+              "cell-1-1",
+              "cell-2-1"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "th-2",
+              "cell-0-2",
+              "cell-1-2",
+              "cell-2-2"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Visible alignment of adjacent content",
+          "Role-based type sizes and density",
+          "Captions and evidence remain legible"
+        ]
+      }
+    },
+    {
+      "id": "process",
+      "name": "试点实施流程",
+      "svg": "layouts/process.svg",
+      "notes": "All scores and scenarios on this page are synthetic demonstration content. No real project, person or organization is represented.",
+      "contract": {
+        "rules": [
+          {
+            "kind": "inside",
+            "items": [
+              "page-title"
+            ],
+            "box": [
+              72,
+              20,
+              1150,
+              90
+            ]
+          },
+          {
+            "kind": "align",
+            "items": [
+              "step-number-0",
+              "step-title-0",
+              "step-body-0",
+              "step-output-0"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "step-number-1",
+              "step-title-1",
+              "step-body-1",
+              "step-output-1"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "step-number-2",
+              "step-title-2",
+              "step-body-2",
+              "step-output-2"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "equal-gap",
+            "items": [
+              "step-box-0",
+              "step-box-1",
+              "step-box-2"
+            ],
+            "axis": "x",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "step-title-0",
+              "step-title-1",
+              "step-title-2"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Visible alignment of adjacent content",
+          "Role-based type sizes and density",
+          "Captions and evidence remain legible"
+        ]
+      }
+    },
+    {
+      "id": "ending",
+      "name": "讨论与建议",
+      "svg": "layouts/ending.svg",
+      "notes": "All scores and scenarios on this page are synthetic demonstration content. No real project, person or organization is represented.",
+      "contract": {
+        "rules": [
+          {
+            "kind": "align",
+            "items": [
+              "end-title",
+              "end-subtitle"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Visible alignment of adjacent content",
+          "Role-based type sizes and density",
+          "Captions and evidence remain legible"
+        ]
+      }
+    }
+  ]
+}

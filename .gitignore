@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+work/
+private/
+browser-profile/
+test-browser-profile/
+revisions/
+*.log
+.env
+.env.*
+credentials*
+*token*.txt
+privacy-denylist.txt

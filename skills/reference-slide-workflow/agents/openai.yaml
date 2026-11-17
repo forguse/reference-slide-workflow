@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reference Slide Workflow"
+  short_description: "Match a slide reference, adapt its layouts, and verify the export"
+  default_prompt: "Use $reference-slide-workflow to make an editable presentation in the style of this reference, adapting the layouts to my content and checking the actual PPTX."

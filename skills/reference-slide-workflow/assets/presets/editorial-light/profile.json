@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "name": "editorial-light",
+  "canvas": [
+    1280,
+    720
+  ],
+  "language": "zh-CN",
+  "typography": {
+    "title": {
+      "family": "Microsoft YaHei",
+      "size": 40,
+      "weight": 700
+    },
+    "body": {
+      "family": "Microsoft YaHei",
+      "size": 24,
+      "weight": 400
+    },
+    "caption": {
+      "family": "Microsoft YaHei",
+      "size": 18,
+      "weight": 400
+    },
+    "numeral": {
+      "family": "Arial",
+      "size": 44,
+      "weight": 700
+    }
+  },
+  "palette": {
+    "bg": "#F5F1E8",
+    "ink": "#202624",
+    "accent": "#B64A2F",
+    "secondary": "#CC7A5D",
+    "soft": "#EAE2D4",
+    "highlight": "#B64A2F",
+    "line": "#C7BCAA"
+  },
+  "margins": {
+    "left": 72,
+    "right": 72,
+    "top": 40,
+    "bottom": 38
+  },
+  "fixed_anchors": [
+    "Shared left edge for heading and body",
+    "Stable type hierarchy",
+    "Consistent emphasis color"
+  ],
+  "flexible_compositions": [
+    "Evidence with interpretation",
+    "Comparison table",
+    "Three-stage process",
+    "Standalone cover and ending"
+  ],
+  "identity_assets": [],
+  "origin": "Original neutral preset; all example scores are synthetic",
+  "writing": {
+    "repeated_middle_dot_labels": false
+  }
+}
