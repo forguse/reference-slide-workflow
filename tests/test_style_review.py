@@ -46,4 +46,29 @@ class StyleReviewTests(unittest.TestCase):
     def test_legacy_project_can_receive_local_revision(self):
         save(self.root/'project/style-profile.json',{'typography':{'body':{'family':'Arial'}}});sr.require(self.root)
 
+    def enable_pair_review(self):
+        from PIL import Image
+        self.profile['review_protocol']='reference-pair-v1';save(self.root/'project/style-profile.json',self.profile)
+        self.reference=self.root/'reference.png';Image.new('RGB',(320,180),'brown').save(self.reference)
+        Image.new('RGB',(320,180),'tan').save(self.root/'screenshots/01.png')
+        self.report['pages'][0]['screenshot_sha256']=sha(self.root/'screenshots/01.png');save(self.root/'preview-report.json',self.report)
+        self.input['targets'][0].update(reference_observation='The reference places a compact paragraph next to the subject and leaves the opposite field quiet.',adaptation_reason='The new subject is wider, so the short paragraph moves along its edge without becoming a detached sidebar.',remaining_gaps=[])
+
+    def test_comparative_approval_requires_actual_pair(self):
+        self.enable_pair_review()
+        with self.assertRaisesRegex(ValueError,'comparison before'):sr.record(self.root,self.input)
+
+    def test_open_loss_blocks_an_otherwise_adapted_approval(self):
+        self.enable_pair_review();sr.prepare_comparison(self.root,self.reference,1)
+        self.input['targets'][0]['remaining_gaps']=['The paragraph is still detached from its subject.'];sr.record(self.root,self.input)
+        with self.assertRaisesRegex(ValueError,'Unresolved reference-style gaps'):sr.require(self.root)
+
+    def test_current_pair_and_resolved_loss_review_pass(self):
+        self.enable_pair_review();sr.prepare_comparison(self.root,self.reference,1);sr.record(self.root,self.input);sr.require(self.root)
+
+    def test_changed_pair_invalidates_approval(self):
+        self.enable_pair_review();sr.prepare_comparison(self.root,self.reference,1);sr.record(self.root,self.input)
+        (self.root/'style-comparisons/pair-01.png').write_bytes(b'changed board')
+        with self.assertRaisesRegex(ValueError,'stale or altered'):sr.require(self.root)
+
 if __name__=='__main__':unittest.main()

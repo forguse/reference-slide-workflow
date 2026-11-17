@@ -28,6 +28,8 @@ With a diverse reference deck, inspect its existing families first and reuse/ada
 
 ## Test the hardest representative page
 
+Make this a **loss review**, not an inventory of features already present. A pilot can contain a serif, a cutout and a texture while losing the reference's compact annotation block, subject-bound title and generous quiet field. First describe those relationships in the reference; then inspect the result at the same apparent page size. List what became weaker or disappeared. A valid package and a fluent paragraph praising the result are not reasons to clear a missing defining relationship.
+
 Before scaling, inspect a representative content page and any cover whose visual logic is materially different. Compare against the reference at matching apparent size. Ask: Where does the eye enter? What carries the visual weight? Which edges, crops and text/image relationships make the composition work? Did the new page retain these in an appropriate form? Is meaningful small text positioned with the same care as the large subject?
 
 If a reference-defining relationship has disappeared, repair it before producing the rest. Retaining the palette while replacing all image integration with plain rectangular photo rows is a failed interpretation when integration was a core target. A plain photo row is appropriate when that is the reference's grammar or the content needs it and the adaptation preserves the intended character.
@@ -36,12 +38,16 @@ Record each target as `retained`, `adapted` or `failed`, with the inspected page
 
 ## Version-bound review
 
-For new reference-led projects, the authoring profile contains `reference_mode` and nonempty `style_targets`. After viewing the actual HTML screenshots, save a review input JSON:
+New reference-led projects use `review_protocol: "reference-pair-v1"` (set by initialization). After the HTML passes, create a private comparison board with `python scripts/style_review.py compare --out <build> --reference <image> --page 1`. For a portfolio contact sheet, add `--crop X Y W H` to select the actual slide, excluding the surrounding mockup. The tool pairs that reference with the current rendered page at equal apparent canvas size. Inspect the pair for composition and the full-size originals for small type. These review images may contain private references; they are not public slide assets. Existing projects can opt into this protocol when their reference interpretation needs revision.
+
+Record each target only after comparison. A result observation must say how it relates to the reference, an adaptation needs a content-based reason, and `remaining_gaps` lists missing defining relationships. An empty list means an actual loss review found none; it must not be prefilled as an approval shortcut. Unresolved gaps block export even when `status` says `adapted`. Record ordinary differences that preserve the design's purpose in the adaptation reason, not as invented defects.
+
+Example review input:
 
 ```json
-{"targets":[{"id":"subject-type-space","page":1,"status":"adapted","observation":"The new roof silhouette occupies the lower image field; the vertical annotation follows its left edge, with the primary title in the upper quiet field. The new wider subject changes the crop while retaining this relationship."}]}
+{"targets":[{"id":"subject-type-space","page":1,"status":"adapted","reference_observation":"The reference gathers its short reading text beside the subject and leaves the opposite field quiet.","observation":"The wider new subject meets a compact annotation block at its left edge; the opposite field remains open.","adaptation_reason":"The new subject is wider, so the annotation becomes horizontal while retaining its proximity and secondary visual weight.","remaining_gaps":[]}]}
 ```
 
 Run `python scripts/style_review.py record --out <build> --file <review.json>`. The exporter requires this assessment alongside ordinary visual review. It binds the review to the profile, target page's visual digest and exact screenshot bytes; changed targets or page pixels require renewed inspection. Unchanged representative pages can retain evidence when other pages change.
 
-The script checks completeness and freshness, not aesthetic quality. The agent must actually compare the reference and rendered result and make the judgment. Preserve these working records outside the slides; do not turn them into on-slide production explanations.
+The script checks comparison evidence, explicit gap disposition and freshness; it cannot certify aesthetic quality. The agent must actually compare and judge the images. Do not present this gate as an automated beauty score or a promise that every subjective preference has been anticipated. Preserve these working records outside the slides.

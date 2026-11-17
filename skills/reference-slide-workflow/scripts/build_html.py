@@ -15,6 +15,8 @@ def initialize(spec_path,out,preset_demo=False):
     if profile.get('evidence') and not preset_demo and not profile.get('style_targets'):
         raise ValueError('Reference-led projects need concrete style_targets before the pilot (see style-fidelity.md)')
     validate_style_targets(profile)
+    if profile.get('style_targets'):
+        profile['review_protocol']='reference-pair-v1'
     if out.exists() and any(out.iterdir()):raise ValueError('Use an empty output directory; use --refresh for an existing project')
     slides=spec.get('slides',[])
     if not slides:raise ValueError('No slides supplied')

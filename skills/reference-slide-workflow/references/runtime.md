@@ -35,6 +35,8 @@ If the user requests only an HTML preview, finish with `review_gate.py finalize-
 
 Reference-led projects additionally compare the actual reference and representative pages against the profile's `style_targets`, then record `python scripts/style_review.py record --out work/my-deck --file style-assessment.json`. See [style fidelity](style-fidelity.md) for the observation format. Missing, failed or stale target evidence blocks preview finalization and PPT export; ordinary geometry approval cannot replace it.
 
+New projects use `reference-pair-v1`: first run `python scripts/style_review.py compare --out work/my-deck --reference private/reference.png --page 1` (optionally `--crop X Y W H` for a contact sheet), inspect the generated board and full-size pages, and then record reference observations, adaptation reasons and any remaining gaps. Open gaps and stale comparison images block approval. These private comparison images are review evidence, not slides or public examples.
+
 ## Official conversion dependency
 
 PPT Master is fetched separately, at the immutable version in dependency-lock.json:
