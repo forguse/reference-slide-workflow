@@ -1,0 +1,3204 @@
+{
+  "title": "蓝色结构化汇报模板",
+  "profile": "profile.json",
+  "slides": [
+    {
+      "id": "01-cover",
+      "name": "封面",
+      "svg": "layouts/01_cover.svg",
+      "notes": "This is a reusable neutral layout with replacement text and editable figure placeholders. No source logos, institutional photos, personal details or research content are included.",
+      "contract": {
+        "schema": 1,
+        "origin": "existing-reference-geometry-with-identity-and-subject-removed",
+        "rules": [
+          {
+            "kind": "inside",
+            "items": [
+              "text-004"
+            ],
+            "box": [
+              469.0,
+              456.0,
+              342.0,
+              45.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-001",
+              "text-002",
+              "text-003",
+              "text-004",
+              "text-005",
+              "text-006",
+              "text-007"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Figure slots and captions remain aligned",
+          "Template text fits original containers",
+          "No source identity or research figures remain"
+        ]
+      }
+    },
+    {
+      "id": "02-chapter",
+      "name": "章节过渡",
+      "svg": "layouts/02_chapter.svg",
+      "notes": "This is a reusable neutral layout with replacement text and editable figure placeholders. No source logos, institutional photos, personal details or research content are included.",
+      "contract": {
+        "schema": 1,
+        "origin": "existing-reference-geometry-with-identity-and-subject-removed",
+        "rules": [
+          {
+            "kind": "align",
+            "items": [
+              "text-002",
+              "text-003",
+              "section-presenter"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Figure slots and captions remain aligned",
+          "Template text fits original containers",
+          "No source identity or research figures remain"
+        ]
+      }
+    },
+    {
+      "id": "03-comparison",
+      "name": "问题与比较",
+      "svg": "layouts/03_comparison.svg",
+      "notes": "This is a reusable neutral layout with replacement text and editable figure placeholders. No source logos, institutional photos, personal details or research content are included.",
+      "contract": {
+        "schema": 1,
+        "origin": "existing-reference-geometry-with-identity-and-subject-removed",
+        "rules": [
+          {
+            "kind": "inside",
+            "items": [
+              "page-title"
+            ],
+            "box": [
+              53,
+              10,
+              889,
+              64
+            ],
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-002"
+            ],
+            "box": [
+              35.0,
+              97.0,
+              1209.0,
+              59.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-003"
+            ],
+            "box": [
+              35.0,
+              179.0,
+              343.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-004"
+            ],
+            "box": [
+              55.0,
+              425.0,
+              303.0,
+              36.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-005"
+            ],
+            "box": [
+              35.0,
+              179.0,
+              343.0,
+              502.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-006"
+            ],
+            "box": [
+              35.0,
+              179.0,
+              343.0,
+              502.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-007"
+            ],
+            "box": [
+              55.0,
+              592.0,
+              303.0,
+              64.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-008"
+            ],
+            "box": [
+              55.0,
+              592.0,
+              303.0,
+              64.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-009"
+            ],
+            "box": [
+              434.0,
+              194.0,
+              790.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-010"
+            ],
+            "box": [
+              434.0,
+              248.0,
+              145.0,
+              46.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-011"
+            ],
+            "box": [
+              579.0,
+              248.0,
+              215.0,
+              46.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-012"
+            ],
+            "box": [
+              794.0,
+              248.0,
+              215.0,
+              46.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-013"
+            ],
+            "box": [
+              1009.0,
+              248.0,
+              215.0,
+              46.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-014"
+            ],
+            "box": [
+              434.0,
+              294.0,
+              145.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-015"
+            ],
+            "box": [
+              579.0,
+              294.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-016"
+            ],
+            "box": [
+              794.0,
+              294.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-017"
+            ],
+            "box": [
+              1009.0,
+              294.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-018"
+            ],
+            "box": [
+              434.0,
+              355.0,
+              145.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-019"
+            ],
+            "box": [
+              579.0,
+              355.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-020"
+            ],
+            "box": [
+              794.0,
+              355.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-021"
+            ],
+            "box": [
+              1009.0,
+              355.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-022"
+            ],
+            "box": [
+              434.0,
+              416.0,
+              145.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-023"
+            ],
+            "box": [
+              579.0,
+              416.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-024"
+            ],
+            "box": [
+              794.0,
+              416.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-025"
+            ],
+            "box": [
+              1009.0,
+              416.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-026"
+            ],
+            "box": [
+              434.0,
+              477.0,
+              145.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-027"
+            ],
+            "box": [
+              579.0,
+              477.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-028"
+            ],
+            "box": [
+              794.0,
+              477.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-029"
+            ],
+            "box": [
+              1009.0,
+              477.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-030"
+            ],
+            "box": [
+              434.0,
+              538.0,
+              145.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-031"
+            ],
+            "box": [
+              579.0,
+              538.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-032"
+            ],
+            "box": [
+              794.0,
+              538.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-033"
+            ],
+            "box": [
+              1009.0,
+              538.0,
+              215.0,
+              61.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-034"
+            ],
+            "box": [
+              434.0,
+              615.0,
+              790.0,
+              44.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-005",
+              "text-006",
+              "text-007",
+              "text-008"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-010",
+              "text-014",
+              "text-018",
+              "text-022",
+              "text-026",
+              "text-030"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-011",
+              "text-015",
+              "text-019",
+              "text-023",
+              "text-027",
+              "text-031"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-012",
+              "text-016",
+              "text-020",
+              "text-024",
+              "text-028",
+              "text-032"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-013",
+              "text-017",
+              "text-021",
+              "text-025",
+              "text-029",
+              "text-033"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-010",
+              "text-011",
+              "text-012",
+              "text-013"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-014",
+              "text-015",
+              "text-016",
+              "text-017"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-018",
+              "text-019",
+              "text-020",
+              "text-021"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-022",
+              "text-023",
+              "text-024",
+              "text-025"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-026",
+              "text-027",
+              "text-028",
+              "text-029"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-030",
+              "text-031",
+              "text-032",
+              "text-033"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-02-placeholder"
+            ],
+            "box": [
+              52.0,
+              235.0,
+              309.0,
+              174.0
+            ],
+            "inset": 2
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Figure slots and captions remain aligned",
+          "Template text fits original containers",
+          "No source identity or research figures remain"
+        ]
+      }
+    },
+    {
+      "id": "04-route",
+      "name": "四层实施路线",
+      "svg": "layouts/04_route.svg",
+      "notes": "This is a reusable neutral layout with replacement text and editable figure placeholders. No source logos, institutional photos, personal details or research content are included.",
+      "contract": {
+        "schema": 1,
+        "origin": "existing-reference-geometry-with-identity-and-subject-removed",
+        "rules": [
+          {
+            "kind": "inside",
+            "items": [
+              "page-title"
+            ],
+            "box": [
+              53,
+              10,
+              889,
+              64
+            ],
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-002"
+            ],
+            "box": [
+              35.0,
+              97.0,
+              1209.0,
+              98.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-003"
+            ],
+            "box": [
+              35.0,
+              97.0,
+              1209.0,
+              98.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-004"
+            ],
+            "box": [
+              35.0,
+              220.0,
+              1209.0,
+              68.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-005"
+            ],
+            "box": [
+              35.0,
+              220.0,
+              1209.0,
+              68.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-006"
+            ],
+            "box": [
+              176.0,
+              232.0,
+              250.0,
+              43.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-007"
+            ],
+            "box": [
+              442.0,
+              232.0,
+              250.0,
+              43.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-008"
+            ],
+            "box": [
+              708.0,
+              232.0,
+              250.0,
+              43.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-009"
+            ],
+            "box": [
+              974.0,
+              232.0,
+              250.0,
+              43.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-014"
+            ],
+            "box": [
+              176.0,
+              323.0,
+              250.0,
+              249.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-015"
+            ],
+            "box": [
+              176.0,
+              323.0,
+              250.0,
+              249.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-016"
+            ],
+            "box": [
+              442.0,
+              323.0,
+              250.0,
+              249.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-017"
+            ],
+            "box": [
+              442.0,
+              323.0,
+              250.0,
+              249.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-018"
+            ],
+            "box": [
+              708.0,
+              323.0,
+              250.0,
+              249.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-019"
+            ],
+            "box": [
+              708.0,
+              323.0,
+              250.0,
+              249.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-020"
+            ],
+            "box": [
+              974.0,
+              323.0,
+              250.0,
+              249.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-021"
+            ],
+            "box": [
+              974.0,
+              323.0,
+              250.0,
+              249.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-022"
+            ],
+            "box": [
+              176.0,
+              323.0,
+              250.0,
+              249.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-023"
+            ],
+            "box": [
+              442.0,
+              323.0,
+              250.0,
+              249.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-024"
+            ],
+            "box": [
+              725.0,
+              403.0,
+              98.0,
+              38.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-025"
+            ],
+            "box": [
+              844.0,
+              403.0,
+              98.0,
+              38.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-026"
+            ],
+            "box": [
+              844.0,
+              478.0,
+              98.0,
+              38.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-027"
+            ],
+            "box": [
+              725.0,
+              478.0,
+              98.0,
+              38.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-028"
+            ],
+            "box": [
+              708.0,
+              323.0,
+              250.0,
+              249.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-029"
+            ],
+            "box": [
+              974.0,
+              323.0,
+              250.0,
+              249.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-030"
+            ],
+            "box": [
+              158.0,
+              578.0,
+              1086.0,
+              44.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-032"
+            ],
+            "box": [
+              35.0,
+              649.0,
+              1209.0,
+              47.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-033"
+            ],
+            "box": [
+              35.0,
+              649.0,
+              1209.0,
+              47.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-004",
+              "text-005",
+              "text-010",
+              "text-011",
+              "text-012",
+              "text-013",
+              "text-031",
+              "text-032"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-006",
+              "text-014",
+              "text-015",
+              "text-022"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-007",
+              "text-016",
+              "text-017",
+              "text-023"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-008",
+              "text-018",
+              "text-019",
+              "text-028"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-009",
+              "text-020",
+              "text-021",
+              "text-029"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-006",
+              "text-007",
+              "text-008",
+              "text-009"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-014",
+              "text-016",
+              "text-018",
+              "text-020"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-015",
+              "text-017",
+              "text-019",
+              "text-021"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-022",
+              "text-023",
+              "text-028",
+              "text-029"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-024",
+              "text-025"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-026",
+              "text-027"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "picture-03",
+              "picture-04"
+            ],
+            "edge": "top",
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-02-placeholder"
+            ],
+            "box": [
+              184.0,
+              391.0,
+              234.0,
+              143.0
+            ],
+            "inset": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-03-placeholder"
+            ],
+            "box": [
+              450.0,
+              391.0,
+              112.0,
+              141.0
+            ],
+            "inset": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-04-placeholder"
+            ],
+            "box": [
+              569.0,
+              391.0,
+              115.0,
+              141.0
+            ],
+            "inset": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-05-placeholder"
+            ],
+            "box": [
+              982.0,
+              390.0,
+              141.0,
+              142.0
+            ],
+            "inset": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-06-placeholder"
+            ],
+            "box": [
+              1129.0,
+              390.0,
+              86.0,
+              145.0
+            ],
+            "inset": 2
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Figure slots and captions remain aligned",
+          "Template text fits original containers",
+          "No source identity or research figures remain"
+        ]
+      }
+    },
+    {
+      "id": "05-research",
+      "name": "任务与图组",
+      "svg": "layouts/05_research.svg",
+      "notes": "This is a reusable neutral layout with replacement text and editable figure placeholders. No source logos, institutional photos, personal details or research content are included.",
+      "contract": {
+        "schema": 1,
+        "origin": "existing-reference-geometry-with-identity-and-subject-removed",
+        "rules": [
+          {
+            "kind": "inside",
+            "items": [
+              "page-title"
+            ],
+            "box": [
+              53,
+              10,
+              889,
+              64
+            ],
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-002"
+            ],
+            "box": [
+              35.0,
+              97.0,
+              1209.0,
+              59.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-003"
+            ],
+            "box": [
+              35.0,
+              179.0,
+              343.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-004"
+            ],
+            "box": [
+              35.0,
+              179.0,
+              343.0,
+              502.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-005"
+            ],
+            "box": [
+              55.0,
+              266.0,
+              303.0,
+              32.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-006"
+            ],
+            "box": [
+              101.0,
+              491.0,
+              212.0,
+              43.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-007"
+            ],
+            "box": [
+              35.0,
+              179.0,
+              343.0,
+              502.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-008"
+            ],
+            "box": [
+              54.0,
+              629.0,
+              121.0,
+              31.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-009"
+            ],
+            "box": [
+              237.0,
+              629.0,
+              121.0,
+              31.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-010"
+            ],
+            "box": [
+              435.0,
+              196.0,
+              160.0,
+              37.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-011"
+            ],
+            "box": [
+              414.0,
+              179.0,
+              830.0,
+              502.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-012"
+            ],
+            "box": [
+              435.0,
+              249.0,
+              787.0,
+              271.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-013"
+            ],
+            "box": [
+              435.0,
+              249.0,
+              787.0,
+              271.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-014"
+            ],
+            "box": [
+              435.0,
+              249.0,
+              787.0,
+              271.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-015"
+            ],
+            "box": [
+              459.0,
+              449.0,
+              115.0,
+              37.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-016"
+            ],
+            "box": [
+              618.0,
+              449.0,
+              115.0,
+              37.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-017"
+            ],
+            "box": [
+              777.0,
+              449.0,
+              115.0,
+              37.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-018"
+            ],
+            "box": [
+              936.0,
+              449.0,
+              115.0,
+              37.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-019"
+            ],
+            "box": [
+              1095.0,
+              449.0,
+              115.0,
+              37.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-020"
+            ],
+            "box": [
+              435.0,
+              249.0,
+              787.0,
+              271.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-021"
+            ],
+            "box": [
+              452.0,
+              562.0,
+              358.0,
+              100.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-022"
+            ],
+            "box": [
+              452.0,
+              562.0,
+              358.0,
+              100.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-023"
+            ],
+            "box": [
+              452.0,
+              562.0,
+              358.0,
+              100.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-024"
+            ],
+            "box": [
+              850.0,
+              562.0,
+              358.0,
+              100.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-025"
+            ],
+            "box": [
+              850.0,
+              562.0,
+              358.0,
+              100.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-026"
+            ],
+            "box": [
+              850.0,
+              562.0,
+              358.0,
+              100.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-021",
+              "text-022",
+              "text-023"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-024",
+              "text-025",
+              "text-026"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-008",
+              "text-009"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-010",
+              "text-011"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-012",
+              "text-013",
+              "text-014"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-015",
+              "text-016",
+              "text-017",
+              "text-018",
+              "text-019"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-021",
+              "text-024"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-022",
+              "text-025"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-023",
+              "text-026"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "picture-03",
+              "picture-04",
+              "picture-05"
+            ],
+            "edge": "top",
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-02-placeholder"
+            ],
+            "box": [
+              54.0,
+              334.0,
+              306.0,
+              148.0
+            ],
+            "inset": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-03-placeholder"
+            ],
+            "box": [
+              448.0,
+              262.0,
+              236.0,
+              138.0
+            ],
+            "inset": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-04-placeholder"
+            ],
+            "box": [
+              707.0,
+              262.0,
+              236.0,
+              138.0
+            ],
+            "inset": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-05-placeholder"
+            ],
+            "box": [
+              965.0,
+              262.0,
+              245.0,
+              138.0
+            ],
+            "inset": 2
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Figure slots and captions remain aligned",
+          "Template text fits original containers",
+          "No source identity or research figures remain"
+        ]
+      }
+    },
+    {
+      "id": "06-results",
+      "name": "成果与验证",
+      "svg": "layouts/06_results.svg",
+      "notes": "This is a reusable neutral layout with replacement text and editable figure placeholders. No source logos, institutional photos, personal details or research content are included.",
+      "contract": {
+        "schema": 1,
+        "origin": "existing-reference-geometry-with-identity-and-subject-removed",
+        "rules": [
+          {
+            "kind": "inside",
+            "items": [
+              "page-title"
+            ],
+            "box": [
+              53,
+              10,
+              889,
+              64
+            ],
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-002"
+            ],
+            "box": [
+              35.0,
+              97.0,
+              1209.0,
+              59.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-003"
+            ],
+            "box": [
+              49.0,
+              193.0,
+              759.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-004"
+            ],
+            "box": [
+              35.0,
+              179.0,
+              787.0,
+              502.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-005"
+            ],
+            "box": [
+              429.0,
+              505.0,
+              364.0,
+              108.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-006"
+            ],
+            "box": [
+              429.0,
+              505.0,
+              364.0,
+              108.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-007"
+            ],
+            "box": [
+              429.0,
+              505.0,
+              364.0,
+              108.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-008"
+            ],
+            "box": [
+              35.0,
+              179.0,
+              787.0,
+              502.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-009"
+            ],
+            "box": [
+              864.0,
+              193.0,
+              366.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-010"
+            ],
+            "box": [
+              867.0,
+              247.0,
+              360.0,
+              110.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-011"
+            ],
+            "box": [
+              867.0,
+              247.0,
+              360.0,
+              110.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-012"
+            ],
+            "box": [
+              867.0,
+              247.0,
+              360.0,
+              110.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-013"
+            ],
+            "box": [
+              867.0,
+              373.0,
+              360.0,
+              110.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-014"
+            ],
+            "box": [
+              867.0,
+              373.0,
+              360.0,
+              110.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-015"
+            ],
+            "box": [
+              867.0,
+              373.0,
+              360.0,
+              110.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-016"
+            ],
+            "box": [
+              867.0,
+              499.0,
+              360.0,
+              110.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-017"
+            ],
+            "box": [
+              867.0,
+              499.0,
+              360.0,
+              110.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-018"
+            ],
+            "box": [
+              867.0,
+              499.0,
+              360.0,
+              110.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-019"
+            ],
+            "box": [
+              867.0,
+              628.0,
+              360.0,
+              31.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-011",
+              "text-014",
+              "text-017"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-012",
+              "text-015",
+              "text-018"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-005",
+              "text-006",
+              "text-007"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-010",
+              "text-013",
+              "text-016"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-003",
+              "text-009"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-010",
+              "text-011"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-013",
+              "text-014"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-016",
+              "text-017"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-02-placeholder"
+            ],
+            "box": [
+              60.0,
+              242.0,
+              324.0,
+              373.0
+            ],
+            "inset": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-03-placeholder"
+            ],
+            "box": [
+              426,
+              242,
+              368,
+              211
+            ],
+            "inset": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "picture-02",
+              "picture-03"
+            ],
+            "edge": "top",
+            "tolerance": 1
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Figure slots and captions remain aligned",
+          "Template text fits original containers",
+          "No source identity or research figures remain"
+        ]
+      }
+    },
+    {
+      "id": "07-platform",
+      "name": "基础与资源",
+      "svg": "layouts/07_platform.svg",
+      "notes": "This is a reusable neutral layout with replacement text and editable figure placeholders. No source logos, institutional photos, personal details or research content are included.",
+      "contract": {
+        "schema": 1,
+        "origin": "existing-reference-geometry-with-identity-and-subject-removed",
+        "rules": [
+          {
+            "kind": "inside",
+            "items": [
+              "page-title"
+            ],
+            "box": [
+              53,
+              10,
+              889,
+              64
+            ],
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-002"
+            ],
+            "box": [
+              35.0,
+              97.0,
+              1209.0,
+              59.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-003"
+            ],
+            "box": [
+              47.0,
+              191.0,
+              359.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-004"
+            ],
+            "box": [
+              35.0,
+              179.0,
+              383.0,
+              289.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-005"
+            ],
+            "box": [
+              460.0,
+              191.0,
+              359.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-006"
+            ],
+            "box": [
+              448.0,
+              179.0,
+              383.0,
+              289.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-007"
+            ],
+            "box": [
+              873.0,
+              191.0,
+              359.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-008"
+            ],
+            "box": [
+              861.0,
+              179.0,
+              383.0,
+              289.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-009"
+            ],
+            "box": [
+              49.0,
+              506.0,
+              710.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-010"
+            ],
+            "box": [
+              35.0,
+              492.0,
+              738.0,
+              188.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-011"
+            ],
+            "box": [
+              35.0,
+              492.0,
+              738.0,
+              188.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-012"
+            ],
+            "box": [
+              35.0,
+              492.0,
+              738.0,
+              188.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-013"
+            ],
+            "box": [
+              35.0,
+              492.0,
+              738.0,
+              188.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-014"
+            ],
+            "box": [
+              35.0,
+              492.0,
+              738.0,
+              188.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-015"
+            ],
+            "box": [
+              35.0,
+              492.0,
+              738.0,
+              188.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-016"
+            ],
+            "box": [
+              813.0,
+              506.0,
+              417.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-017"
+            ],
+            "box": [
+              799.0,
+              492.0,
+              445.0,
+              188.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-018"
+            ],
+            "box": [
+              799.0,
+              492.0,
+              445.0,
+              188.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-019"
+            ],
+            "box": [
+              799.0,
+              492.0,
+              445.0,
+              188.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-020"
+            ],
+            "box": [
+              799.0,
+              492.0,
+              445.0,
+              188.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-021"
+            ],
+            "box": [
+              799.0,
+              492.0,
+              445.0,
+              188.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-022"
+            ],
+            "box": [
+              799.0,
+              492.0,
+              445.0,
+              188.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-010",
+              "text-012",
+              "text-014"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-011",
+              "text-013",
+              "text-015"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-017",
+              "text-019",
+              "text-021"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-018",
+              "text-020",
+              "text-022"
+            ],
+            "edge": "anchorX",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-003",
+              "text-005",
+              "text-007"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-004",
+              "text-006",
+              "text-008"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-009",
+              "text-016"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-010",
+              "text-011"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-012",
+              "text-013"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-014",
+              "text-015"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-017",
+              "text-018"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-019",
+              "text-020"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-021",
+              "text-022"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "picture-02",
+              "picture-03",
+              "picture-04"
+            ],
+            "edge": "top",
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-02-placeholder"
+            ],
+            "box": [
+              59.0,
+              240.0,
+              335.0,
+              164.0
+            ],
+            "inset": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-03-placeholder"
+            ],
+            "box": [
+              472.0,
+              240.0,
+              335.0,
+              164.0
+            ],
+            "inset": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "picture-04-placeholder"
+            ],
+            "box": [
+              885.0,
+              240.0,
+              335.0,
+              164.0
+            ],
+            "inset": 2
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Figure slots and captions remain aligned",
+          "Template text fits original containers",
+          "No source identity or research figures remain"
+        ]
+      }
+    },
+    {
+      "id": "08-plan",
+      "name": "计划与交付",
+      "svg": "layouts/08_plan.svg",
+      "notes": "This is a reusable neutral layout with replacement text and editable figure placeholders. No source logos, institutional photos, personal details or research content are included.",
+      "contract": {
+        "schema": 1,
+        "origin": "existing-reference-geometry-with-identity-and-subject-removed",
+        "rules": [
+          {
+            "kind": "inside",
+            "items": [
+              "page-title"
+            ],
+            "box": [
+              53,
+              10,
+              889,
+              64
+            ],
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-002"
+            ],
+            "box": [
+              35.0,
+              97.0,
+              1209.0,
+              59.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-003"
+            ],
+            "box": [
+              49.0,
+              193.0,
+              1181.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-004"
+            ],
+            "box": [
+              56.0,
+              249.0,
+              315.0,
+              45.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-005"
+            ],
+            "box": [
+              371.0,
+              249.0,
+              280.0,
+              45.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-006"
+            ],
+            "box": [
+              651.0,
+              249.0,
+              280.0,
+              45.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-007"
+            ],
+            "box": [
+              931.0,
+              249.0,
+              280.0,
+              45.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-008"
+            ],
+            "box": [
+              56.0,
+              294.0,
+              315.0,
+              64.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-009"
+            ],
+            "box": [
+              385.0,
+              308.0,
+              252.0,
+              36.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-010"
+            ],
+            "box": [
+              56.0,
+              358.0,
+              315.0,
+              64.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-011"
+            ],
+            "box": [
+              665.0,
+              372.0,
+              252.0,
+              36.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-012"
+            ],
+            "box": [
+              56.0,
+              422.0,
+              315.0,
+              64.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-013"
+            ],
+            "box": [
+              945.0,
+              436.0,
+              252.0,
+              36.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-014"
+            ],
+            "box": [
+              47.0,
+              547.0,
+              359.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-015"
+            ],
+            "box": [
+              35.0,
+              535.0,
+              383.0,
+              145.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-016"
+            ],
+            "box": [
+              35.0,
+              535.0,
+              383.0,
+              145.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-017"
+            ],
+            "box": [
+              460.0,
+              547.0,
+              359.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-018"
+            ],
+            "box": [
+              448.0,
+              535.0,
+              383.0,
+              145.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-019"
+            ],
+            "box": [
+              448.0,
+              535.0,
+              383.0,
+              145.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-020"
+            ],
+            "box": [
+              873.0,
+              547.0,
+              359.0,
+              35.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-021"
+            ],
+            "box": [
+              861.0,
+              535.0,
+              383.0,
+              145.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "inside",
+            "items": [
+              "text-022"
+            ],
+            "box": [
+              861.0,
+              535.0,
+              383.0,
+              145.0
+            ],
+            "inset": 0,
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-003",
+              "text-017",
+              "text-018",
+              "text-019"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-004",
+              "text-008",
+              "text-010",
+              "text-012"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-014",
+              "text-015",
+              "text-016"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-020",
+              "text-021",
+              "text-022"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-004",
+              "text-005",
+              "text-006",
+              "text-007"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-008",
+              "text-009"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-010",
+              "text-011"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-012",
+              "text-013"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-014",
+              "text-017",
+              "text-020"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-015",
+              "text-018",
+              "text-021"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          },
+          {
+            "kind": "align",
+            "items": [
+              "text-016",
+              "text-019",
+              "text-022"
+            ],
+            "edge": "baseline",
+            "tolerance": 1
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Figure slots and captions remain aligned",
+          "Template text fits original containers",
+          "No source identity or research figures remain"
+        ]
+      }
+    },
+    {
+      "id": "09-ending",
+      "name": "结束页",
+      "svg": "layouts/09_ending.svg",
+      "notes": "This is a reusable neutral layout with replacement text and editable figure placeholders. No source logos, institutional photos, personal details or research content are included.",
+      "contract": {
+        "schema": 1,
+        "origin": "existing-reference-geometry-with-identity-and-subject-removed",
+        "rules": [
+          {
+            "kind": "align",
+            "items": [
+              "text-001",
+              "text-002",
+              "text-003",
+              "text-004"
+            ],
+            "edge": "centerX",
+            "tolerance": 2
+          }
+        ],
+        "allow_overlap": [],
+        "review_focus": [
+          "Figure slots and captions remain aligned",
+          "Template text fits original containers",
+          "No source identity or research figures remain"
+        ]
+      }
+    }
+  ]
+}

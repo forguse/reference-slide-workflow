@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "name": "structured-blue",
+  "canvas": [
+    1280,
+    720
+  ],
+  "language": "zh-CN",
+  "typography": {
+    "title": {
+      "family": "Microsoft YaHei",
+      "size": 33,
+      "weight": 700
+    },
+    "body": {
+      "family": "Microsoft YaHei",
+      "size": 23,
+      "weight": 400
+    },
+    "caption": {
+      "family": "Microsoft YaHei",
+      "size": 18,
+      "weight": 400
+    },
+    "numeral": {
+      "family": "Arial",
+      "size": 44,
+      "weight": 700
+    }
+  },
+  "palette": {
+    "bg": "#F9FBFD",
+    "ink": "#111821",
+    "accent": "#073B85",
+    "secondary": "#5985B7",
+    "highlight": "#B3131C",
+    "soft": "#E4EDF8",
+    "line": "#AABDD7"
+  },
+  "margins": {
+    "left": 53,
+    "right": 33,
+    "top": 12,
+    "bottom": 24
+  },
+  "fixed_anchors": [
+    "Pale diagonal page field",
+    "Two-part blue title marker",
+    "Blue gradients with readable white text",
+    "Strong aligned figure and caption zones"
+  ],
+  "flexible_compositions": [
+    "封面",
+    "章节过渡",
+    "问题与比较",
+    "四层实施路线",
+    "任务与图组",
+    "成果与验证",
+    "基础与资源",
+    "计划与交付",
+    "结束页"
+  ],
+  "identity_assets": [],
+  "origin": "User-authorized reference layout adaptation; all identifying and subject-specific content removed",
+  "writing": {
+    "repeated_middle_dot_labels": false
+  }
+}

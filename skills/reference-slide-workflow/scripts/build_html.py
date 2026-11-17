@@ -56,7 +56,7 @@ const pageCount='''+str(len(pages))+''';let current=1;function show(n){current=M
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--out',required=True,type=Path)
-    g=p.add_mutually_exclusive_group(required=True);g.add_argument('--spec',type=Path);g.add_argument('--preset',choices=['academic-blue','editorial-light']);g.add_argument('--refresh',action='store_true')
+    g=p.add_mutually_exclusive_group(required=True);g.add_argument('--spec',type=Path);g.add_argument('--preset',choices=['academic-blue','editorial-light','structured-blue']);g.add_argument('--refresh',action='store_true')
     a=p.parse_args();root=a.out.resolve()
     if a.refresh:refresh(root)
     else:initialize(a.spec.resolve() if a.spec else SKILL/'assets/presets'/a.preset/'deck.json',root)

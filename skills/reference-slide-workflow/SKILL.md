@@ -12,7 +12,7 @@ Create a presentation in the visual language of the user's reference. Preserve t
 - A reference image/PDF/PPTX: follow [reference analysis](references/reference-analysis.md). Inspect actual pages before deciding fonts, spacing or composition. A PPTX supplied only for its content is not automatically a style reference.
 - An existing project: edit its current SVGs, assets and notes; follow [revision and review](references/revision-and-review.md). Never initialize it again to make a small change.
 - A PPTX edited in presentation software: use the latest PPTX and official PPT Master's native editing route. Do not replace manual edits with an older SVG project.
-- No reference: offer the two optional [presets](references/presets.md), or ask for the desired visual direction if it matters. Do not silently impose the blue preset.
+- No reference: offer the three optional [presets](references/presets.md), or ask for the desired visual direction if it matters. Do not silently impose a blue preset.
 
 ## Extract what makes the reference recognizable
 

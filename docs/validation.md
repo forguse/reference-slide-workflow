@@ -24,3 +24,9 @@ The 4:3 fixture is a small behavior test, not a designed presentation sample. Ed
 For a new reference, the agent still needs to inspect the visual result. Automated checks catch explicit layout violations; they do not establish whether the style interpretation is attractive or faithful. First delivery requires every page to be reviewed. Revision reviews are tied to source, font environment, renderer and screenshot fingerprints, so an old approval cannot silently certify changed content.
 
 The public tree is separately scanned for personal paths, credentials, private terms, institution markers and text inside Office packages. Raster previews and embedded thumbnails are also inspected. User references, raw conversations and local test logs are outside the public tree.
+
+## Additional reference-derived preset
+
+The `structured-blue` preset adds nine layouts adapted from an authorized reference. All nine passed HTML geometry and font checks, editable PPTX export, package readback and actual PPTX visual review. The original raster assets were not copied: image regions use editable neutral placeholders, and the cover/end background uses anonymous native geometry. All reference text was replaced with generic project text. The raw reference and the private adaptation script are not distributed.
+
+The follow-up also exercised incremental checking: after changing two pages, seven unchanged screenshots were reused. A metadata-only group-bounds fix produced nine screenshots with hashes identical to the reviewed version. The retained-temporary-directory runner was corrected to expose the invoked script's own directory, so its sibling imports behave like a normal direct invocation.
