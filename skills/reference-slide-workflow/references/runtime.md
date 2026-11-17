@@ -33,6 +33,8 @@ On other platforms use a locally installed Chromium or appropriate Playwright ch
 
 If the user requests only an HTML preview, finish with `review_gate.py finalize-preview --out work/my-deck`. Its report explicitly says `ppt_verified: false`. Full PPT delivery still requires both stages. The preview language follows the profile and Chinese profiles get Chinese navigation labels.
 
+Reference-led projects additionally compare the actual reference and representative pages against the profile's `style_targets`, then record `python scripts/style_review.py record --out work/my-deck --file style-assessment.json`. See [style fidelity](style-fidelity.md) for the observation format. Missing, failed or stale target evidence blocks preview finalization and PPT export; ordinary geometry approval cannot replace it.
+
 ## Official conversion dependency
 
 PPT Master is fetched separately, at the immutable version in dependency-lock.json:

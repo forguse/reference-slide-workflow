@@ -108,6 +108,10 @@ def validate(plan):
             nonempty(slide.get(key), slide['id'] + '.' + key)
         if not isinstance(slide.get('content'), list) or not slide['content']:
             raise ValueError('Each page needs concrete content')
+        if brief.get('design_depth') == 'page-design' or 'design' in slide:
+            design = slide.get('design', {})
+            for key in ('visual_hierarchy', 'typography', 'image_treatment', 'style_continuity', 'composition_reason'):
+                nonempty(design.get(key), slide['id'] + '.design.' + key)
         for item in slide['content']:
             nonempty(item, 'page.content')
         if type(slide.get('seconds')) not in (int, float) or slide['seconds'] < 0:
@@ -179,6 +183,10 @@ def documents(plan):
         if not s['visuals']:
             lines.append(s['visual_rationale'])
         lines += ['', f'布局与阅读顺序：{s["layout"]}', '', '内容来源：' + (', '.join(s['sources']) or '无外部事实主张'), '', f'讲述重点：{s.get("speaker_focus", s["message"])}', '', f'过渡：{s.get("transition", "本页收束")}', '', '落实要求：' + ', '.join(s['requirements'])]
+        if s.get('design'):
+            lines += ['', '### 本页设计方案', '']
+            for key, label in [('visual_hierarchy','视觉重心与阅读顺序'), ('typography','字体与文字位置'), ('image_treatment','图片处理与保护内容'), ('style_continuity','参考风格的保留与拓展'), ('composition_reason','本页采用这种构图的理由')]:
+                lines += [label + '：' + s['design'][key], '']
     lines += ['', '## 来源定位索引', '']
     for source in plan.get('sources', []):
         lines.append(f'- {source["id"]}：{source["locator"]}')

@@ -25,6 +25,8 @@ Write **fixed anchors** (e.g. top-left title, two weights, thin rule), **flexibl
 
 ## Representative pilot
 
+Apply [style fidelity](style-fidelity.md) to the reference's distinctive relationships before producing the pilot. Matching colors and fonts is insufficient when subject layering, crop, negative space or fine typographic placement carries the design. Several supplied references do not imply a multi-style showcase; follow the user's intended outcome.
+
 Test the hardest representative content page before scaling. A roomy cover cannot prove that a dense evidence page will work. If a cover/end is needed, test its own composition separately. Compare reference and pilot at the same apparent size: font character, hierarchy, density, image scale, gradients and edge alignment. Fix a specific mismatch at the responsible layer. Do not react to “it feels wrong” by adding generic decorations or changing every parameter.
 
 Use the validated rules to produce a family of pages. An unfamiliar new subject may need a different diagram or number of columns while retaining the same style. For example, a four-stage reference becomes a three-stage process when the source only has three stages; preserve heading hierarchy and connectors, not a fabricated fourth stage.

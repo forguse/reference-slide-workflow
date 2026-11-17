@@ -4,7 +4,7 @@ Use the user's purpose and explicit instructions to set permissions. Do not infe
 
 ## Select a boundary before sourcing
 
-Record three independent permissions in the plan: external factual sources, external images, and generated images. Include the instruction that establishes the boundary. Allow per-page overrides only when supported by the user's instructions, with the reason recorded.
+Record three independent sourcing permissions in the plan: external factual sources, external images, and generated images. Separately record image-editing scope: allowed operations, protected content, and the instruction establishing permission. Permission to obtain or generate an image does not automatically authorize AI alteration of supplied evidence. Allow per-page or per-asset overrides only when supported by the user's instructions, with the reason recorded.
 
 | User intent | Appropriate behavior |
 |---|---|
@@ -14,6 +14,20 @@ Record three independent permissions in the plan: external factual sources, exte
 | Permission is unclear and extra material is necessary | Ask one concise question about the missing permission. Continue work supported by existing material. Do not treat “more images” or a style reference as permission to source or generate. |
 
 A project can combine boundaries: a product concept page may allow generation while an experimental evidence page remains closed. Explicit restrictions persist through revisions. A shortage of pictures never silently relaxes them.
+
+## Process images according to their role
+
+For each intended edit, consider the asset's role and the user's purpose before choosing a technique. Discipline alone is insufficient: a marketing deck can contain protected test results, and a scientific deck can contain a freely editable conceptual illustration.
+
+| Asset and purpose | Default editing boundary |
+|---|---|
+| Measurements, plots, microscopy, scans, apparatus photos, documentary or other evidence | Preserve the source. Layout operations may scale proportionally or crop irrelevant outer whitespace when no information or context is lost. Keep axes, legends, labels, conditions and relevant surrounding evidence. Do not use generative fill, redraw, denoising, sharpening that invents detail, object removal, relighting, or color alteration that could change interpretation without specific authorization. |
+| An authorized conceptual, editorial, decorative or promotional image | When the brief permits creative treatment, AI cutouts, background extension, selective cleanup, or tonal treatment may serve a specific composition need. State the intended operation in the working record; preserve protected identity, product features and factual meaning. Creative permission does not make an invented view of a real site into documentary evidence. |
+| Unclear role, or an operation that may affect factual interpretation | Keep the original in the supported draft and ask about the concrete proposed change. Do not treat a desire for beauty, a shortage of images or general permission to generate as consent to alter evidence. |
+
+Prefer native cropping, framing, masks or overlays when they solve the presentation need while retaining the original image. Use AI editing when it adds a useful capability, not merely because it is available. A protected photo can sit beside an independently created diagram without repainting the photo.
+
+Never overwrite the original. Record the derivative's parent, actual edit, tool, prompt when applicable, source/derivative hashes and slide use; inspect before and after. Generative edits must be declared as generated/derived material and must not pass through as unchanged user evidence. For optional editable-image candidates, show the alternative separately or describe it in the production record; keep uncertainty out of slide copy. User-required and legally required disclosures still apply.
 
 ## Where uncertainties and sources belong
 

@@ -18,6 +18,8 @@ Automated geometry uses actual SVG coordinate transforms and declared relationsh
 
 Match the reference's font character, size ratios, weights and line spacing. A research topic does not imply a serif font. A sans-serif reference should not become a serif deck merely to look formal. Conversely, a deliberately editorial serif reference should retain that character if the font is available.
 
+For expressive typography, use [typography and image relationships](typography-and-image.md). Font count is determined by the reference and page job. Maintain recognizable roles across the deck while allowing different pages to use different combinations, orientations and image relationships. Intentional editorial offsets are local design choices, not alignment failures or a reason to disable unrelated checks.
+
 Do not confuse SVG units with PowerPoint points. Keep text editable and preserve the converter's text model. Shorten, restructure or split overloaded content before reducing type. Do not leave a tiny figure surrounded by empty white space when the reference's visual center is a large evidence image.
 
 ## Natural slide language

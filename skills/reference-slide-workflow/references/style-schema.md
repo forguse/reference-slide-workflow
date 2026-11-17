@@ -24,6 +24,8 @@
 
 These values illustrate the schema; they are not defaults for all slides. Use the reference's real aspect ratio and visual hierarchy. All authored SVG viewBoxes must match the profile.
 
+New reference-led profiles with `evidence` also declare `reference_mode` (`single`, `synthesis`, or explicitly requested `showcase`) and `style_targets`, for example `[{"id":"image-type-space","reference":"Reference cover, roof and marginal note","observable":"The silhouette and nearby typography share an intentional edge without obscuring essential detail","pages":[1]}]`. Choose targets from the actual reference, not a universal effects checklist. See [style fidelity](style-fidelity.md) for the required version-bound assessment.
+
 An authoring spec supplies the profile, actual SVGs and intended relationships:
 
 ```json

@@ -4,6 +4,7 @@ from pathlib import Path
 import xml.etree.ElementTree as E
 from project_state import Q,read,save,sha,refresh,validate_svg
 from plan_project import validate as validate_plan, write_documents
+from style_review import targets as validate_style_targets
 SKILL=Path(__file__).resolve().parents[1]
 
 def initialize(spec_path,out,preset_demo=False):
@@ -11,6 +12,9 @@ def initialize(spec_path,out,preset_demo=False):
     profile=read(base/spec['profile']);canvas=profile.get('canvas')
     if not isinstance(canvas,list) or len(canvas)!=2 or any(not isinstance(x,(int,float)) or x<100 or x>10000 for x in canvas):raise ValueError('Profile needs a positive two-dimensional canvas')
     if not profile.get('typography'):raise ValueError('Profile must declare typography roles')
+    if profile.get('evidence') and not preset_demo and not profile.get('style_targets'):
+        raise ValueError('Reference-led projects need concrete style_targets before the pilot (see style-fidelity.md)')
+    validate_style_targets(profile)
     if out.exists() and any(out.iterdir()):raise ValueError('Use an empty output directory; use --refresh for an existing project')
     slides=spec.get('slides',[])
     if not slides:raise ValueError('No slides supplied')
@@ -19,6 +23,8 @@ def initialize(spec_path,out,preset_demo=False):
         raise ValueError('First save the detailed outline; provide plan in the spec (see brief-and-outline.md)')
     if plan_path:
         plan=validate_plan(read(plan_path))
+        if profile.get('style_targets') and plan['brief'].get('design_depth')!='page-design':
+            raise ValueError('Reference-led authoring needs a page-design outline before SVGs (see brief-and-outline.md)')
         if [s['id'] for s in plan['slides']]!=[s.get('id',f'slide-{i:02}') for i,s in enumerate(slides,1)]:
             raise ValueError('Slide order must match the detailed outline')
     for d in ['project/svg_output','project/images','project/notes']:(out/d).mkdir(parents=True,exist_ok=True)

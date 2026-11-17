@@ -15,6 +15,25 @@ from project_state import refresh
 
 
 class PlanningTests(unittest.TestCase):
+    def test_page_design_outline_rejects_missing_design_decisions(self):
+        self.plan['brief']['design_depth'] = 'page-design'
+        with self.assertRaisesRegex(ValueError, 'design.visual_hierarchy'):
+            validate(self.plan)
+
+    def test_page_design_decisions_are_in_the_readable_outline(self):
+        self.plan['brief']['design_depth'] = 'page-design'
+        for slide in self.plan['slides']:
+            slide['design'] = {
+                'visual_hierarchy': 'Enter at the single wide photo, then read its nearby explanation.',
+                'typography': 'Large serif title and compact sans captions attach to the image edge.',
+                'image_treatment': 'Preserve the full evidence photo, with native framing only.',
+                'style_continuity': 'Keep the quiet margin and relative title weight from the reference.',
+                'composition_reason': 'The page explains one subject; unequal areas express its dominance.'}
+        p = self.project()
+        outline = (p / 'outline.md').read_text(encoding='utf-8')
+        for text in self.plan['slides'][0]['design'].values():
+            self.assertIn(text, outline)
+
     def setUp(self):
         self.plan = json.loads((SKILL / 'references/plan.example.json').read_text(encoding='utf-8'))
         self.root = Path(tempfile.mkdtemp(prefix='slide-plan-test-'))

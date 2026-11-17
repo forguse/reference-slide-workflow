@@ -32,6 +32,9 @@ def pending(root,stage):
 def require(root,stage):
     todo=pending(root,stage)
     if todo:raise ValueError(f'Agent must view and record {stage} pages {todo}; a numeric check is not visual approval.')
+    if stage=='html':
+        from style_review import require as require_style
+        require_style(root)
 
 def record(root,stage,pages,note):
     if len(note.strip())<12:raise ValueError('Record concrete visual observations, not only "passed"')
@@ -48,6 +51,9 @@ def finalize(root):
     result={'status':'passed','build_digest':m['build_digest'],'pptx':ex['pptx'],'pptx_sha256':sha(Path(ex['pptx'])),'pages':len(m['pages']),
             'checks':['HTML geometry, overlap, fonts','HTML visual review','official PPT Master conversion','PPTX package integrity','PPT rendered visual review'],
             'review_digest':sha(root/'visual-review.json')}
+    if read(root/'project/style-profile.json').get('style_targets'):
+        result['checks'].append('Reference-style target assessment')
+        result['style_review_digest']=sha(root/'style-review.json')
     save(root/'delivery-report.json',result);return result
 
 if __name__=='__main__':

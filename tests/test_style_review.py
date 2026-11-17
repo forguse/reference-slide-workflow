@@ -1,0 +1,49 @@
+"""Behavior checks for fresh, complete style assessments; not an aesthetic scorer."""
+import copy, json, sys, tempfile, unittest
+from pathlib import Path
+from unittest.mock import patch
+SKILL=Path(__file__).resolve().parents[1]/'skills/reference-slide-workflow'
+sys.path.insert(0,str(SKILL/'scripts'))
+import style_review as sr
+from project_state import save, sha
+
+class StyleReviewTests(unittest.TestCase):
+    def setUp(self):
+        self.root=Path(tempfile.mkdtemp(prefix='slide-style-test-'))
+        (self.root/'project').mkdir();(self.root/'screenshots').mkdir()
+        self.profile={'reference_mode':'single','style_targets':[{'id':'subject-space','reference':'reference cover','observable':'Subject silhouette and type share a controlled whitespace boundary','pages':[1]}]}
+        save(self.root/'project/style-profile.json',self.profile)
+        for n in (1,2):(self.root/f'screenshots/{n:02}.png').write_bytes(f'fixture pixels {n}'.encode())
+        self.report={'status':'passed','build_digest':'build-a','pages':[{'page':n,'visual_digest':f'visual-{n}','screenshot_sha256':sha(self.root/f'screenshots/{n:02}.png')} for n in (1,2)]}
+        save(self.root/'preview-report.json',self.report)
+        self.manifest=patch.object(sr,'verify_manifest',return_value={'build_digest':'build-a'})
+        self.manifest.start();self.addCleanup(self.manifest.stop)
+        self.input={'targets':[{'id':'subject-space','page':1,'status':'adapted','observation':'The wider subject meets the title whitespace while its roofline remains clear; the crop changes for the new photograph.'}]}
+    def test_missing_assessment_blocks(self):
+        with self.assertRaisesRegex(ValueError,'before export'):sr.require(self.root)
+    def test_failed_target_blocks(self):
+        value=copy.deepcopy(self.input);value['targets'][0]['status']='failed';sr.record(self.root,value)
+        with self.assertRaisesRegex(ValueError,'Unresolved'):sr.require(self.root)
+    def test_changed_representative_render_requires_review(self):
+        sr.record(self.root,self.input);sr.require(self.root)
+        (self.root/'screenshots/01.png').write_bytes(b'changed picture')
+        self.report['pages'][0].update(screenshot_sha256=sha(self.root/'screenshots/01.png'),visual_digest='changed-visual')
+        save(self.root/'preview-report.json',self.report)
+        with self.assertRaisesRegex(ValueError,'stale'):sr.require(self.root)
+    def test_unrelated_page_render_preserves_review(self):
+        sr.record(self.root,self.input)
+        (self.root/'screenshots/02.png').write_bytes(b'other picture changed')
+        self.report['pages'][1].update(screenshot_sha256=sha(self.root/'screenshots/02.png'),visual_digest='other-visual')
+        save(self.root/'preview-report.json',self.report);sr.require(self.root)
+    def test_changed_style_definition_requires_review(self):
+        sr.record(self.root,self.input);self.profile['style_targets'][0]['observable']='Subject follows the new diagonal whitespace boundary'
+        save(self.root/'project/style-profile.json',self.profile)
+        with self.assertRaisesRegex(ValueError,'profile changed'):sr.require(self.root)
+    def test_incomplete_or_wrong_page_assessment_rejected(self):
+        with self.assertRaisesRegex(ValueError,'exactly once'):sr.record(self.root,{'targets':[]})
+        value=copy.deepcopy(self.input);value['targets'][0]['page']=2
+        with self.assertRaisesRegex(ValueError,'representative'):sr.record(self.root,value)
+    def test_legacy_project_can_receive_local_revision(self):
+        save(self.root/'project/style-profile.json',{'typography':{'body':{'family':'Arial'}}});sr.require(self.root)
+
+if __name__=='__main__':unittest.main()

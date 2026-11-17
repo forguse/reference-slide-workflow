@@ -15,7 +15,7 @@ Specific user instructions take precedence. If a fixed page count conflicts with
 
 ## Required detail
 
-The opening brief records audience, purpose, duration, page-count constraint, narrative, material permissions and assumptions. Preserve the difference between explicit user requirements and your proposed choices.
+The opening brief records audience, purpose, duration, page-count constraint, narrative, material permissions and assumptions. Preserve the difference between explicit user requirements and your proposed choices. The Markdown outline is the primary page-design brief, not a table of contents or a schedule of preset layouts. Resolve each page's composition here from its content and the reference's visual language; layout names are optional descriptive shorthand after that decision, never a fixed selection menu.
 
 For **every page**, record:
 
@@ -23,9 +23,13 @@ For **every page**, record:
 2. Concrete content: proposed on-slide claims, essential numbers/units/conditions and key wording. “Introduce the background” is not enough.
 3. Evidence sources with usable locators: filename plus page/figure/table, data columns, or an authorized external source. Distinguish a proposed plan from an observed result.
 4. Visual plan: what each image/chart/diagram depicts, its explanatory job, source or planned acquisition route, crop/panel choice and placement. If several figures form a set, state their count and relationship. An unresolved choice belongs in the production record; never write “find a suitable image” as the entire visual plan.
-5. Composition: reading order, relative image/text areas, alignment anchors and grouping. Retain the reference's visual rules while adjusting the layout for the actual number of items. Do not invent arbitrary pixel coordinates before testing the layout.
-6. Approximate speaking time, speaker emphasis and transition when it is a spoken presentation. For an untimed document, use `seconds: 0` and state that timing is not applicable.
-7. The IDs of requirements covered by the page.
+5. Composition: specify the visual entry point, reading order, dominant subject, relative image/text areas, deliberate whitespace, grouping and edges or intentional offsets. Explain how text and images interact, rather than just writing “left text, right image.” Select the composition for this page; do not rotate through preset layouts to manufacture variety. Use approximate proportions while planning and resolve exact geometry in the pilot.
+6. Typography and image treatment: state the page's title/body/marginal-note roles, intended family or letterform character, relative scale, orientation, positioning and image relationships. Identify crops, cutouts, layering, tonal treatments or other processing only when they serve a purpose and fall within the material permissions. Preserve protected image content. A small-text paragraph needs actual content and a readable role, not a decorative placeholder.
+7. Style continuity and adaptation: name the reference relationships this page preserves, how the new content changes the arrangement, and why the result fits the narrative and neighboring pages. Keep one coherent visual language unless the user requested multiple series. Repetition is appropriate when the content calls for it.
+8. Approximate speaking time, speaker emphasis and transition when it is a spoken presentation. For an untimed document, use `seconds: 0` and state that timing is not applicable.
+9. The IDs of requirements covered by the page.
+
+Save these design decisions in each slide's `design` object with concrete `visual_hierarchy`, `typography`, `image_treatment`, `style_continuity` and `composition_reason` strings. `plan_project.py write` includes them in the Markdown outline. New plans record `brief.design_depth: "page-design"`; existing projects without these fields remain editable. The planned arrangement is the authoring starting point, not an immutable pixel prescription. Revise affected decisions after a pilot reveals a better solution while preserving the intended message and style.
 
 Text-only pages are allowed when they serve the content and user request. If the user requires an image on every page, map that as a deck-wide constraint and implement a meaningful visual on each page. Do not introduce stock photos or generated pictures merely to fill a quota under a closed-material policy.
 
@@ -45,6 +49,6 @@ On a content revision, edit `project/plan.json`, then run `plan_project.py write
 
 ## Review without putting the burden on the user
 
-Before production, verify that required topics are covered, the order supports the intended argument, figures have a real purpose, and time/count constraints fit. If the talk is four minutes, allocate about 240 seconds across the actual pages, including any opening or closing pages within that scope; do not add unrelated cover/thanks pages automatically.
+Before production, verify that required topics are covered, the order supports the intended argument, figures have a real purpose, each page has an actual composition decision, and time/count constraints fit. Review the proposed sequence for consistent visual language and content-driven variation; no fixed quota of layout families, fonts or effects is required. If the talk is four minutes, allocate about 240 seconds across the actual pages, including any opening or closing pages within that scope; do not add unrelated cover/thanks pages automatically.
 
 After production, compare each actual page with its plan, then inspect the full-deck rhythm. The script checks structure, requirement mapping, page order, allowed material routes and declared raster use. It cannot judge whether a claim follows from a paper or whether the narrative is compelling; the agent must perform those checks. Never report that a semantic check was automated when it was not.
